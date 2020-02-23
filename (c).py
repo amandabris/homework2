@@ -9,13 +9,13 @@ nx.draw(G,with_labels = True,node_size=700,font_size=12)
 plt.show()
 
 def BreadthFirstLevels(G,root):
-    """
-    Generate a sequence of bipartite directed graphs, each consisting
-    of the edges from level i to level i+1 of G. Edges that connect
-    vertices within the same level are not included in the output.
-    The vertices in each level can be listed by iterating over each
-    output graph.
-    """
+  
+    #Generate a sequence of bipartite directed graphs, each consisting
+    #of the edges from level i to level i+1 of G. Edges that connect
+    #vertices within the same level are not included in the output.
+    #The vertices in each level can be listed by iterating over each
+    #output graph.
+  
     visited = set()                  #create array Visited 
     currentLevel = [root]    #make the root (u) in pseudocode
     while currentLevel:       #list is non-empty
