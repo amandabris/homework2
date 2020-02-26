@@ -1,4 +1,4 @@
-import numpy as np
+
 import matplotlib.pyplot as plt
 import networkx as nx
 
@@ -6,7 +6,6 @@ G=nx.Graph()
 G=nx.read_edgelist("inputfile.edgelist",create_using=nx.DiGraph())
 
 nx.draw(G,with_labels = True,node_size=700,font_size=12)
-plt.show()
 
 def BreadthFirstLevels(G,root):
   
@@ -31,4 +30,3 @@ def BreadthFirstLevels(G,root):
         yield levelGraph           #give the graph of successor level
         currentLevel = nextLevel  #previous next level now becomes current level, new next level
 print(list(BreadthFirstLevels(G,'1'))) #prints graph as tree traversal by BFS
-
