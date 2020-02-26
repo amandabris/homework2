@@ -1,10 +1,8 @@
-"""
-Maximum flow (and minimum cut) algorithms on capacitated graphs.
-"""
+
+#Maximum flow (and minimum cut) algorithms on capacitated graphs.
+
 import networkx as nx
 from networkx.algorithms.flow.utils import *
-
-import numpy
 
 __all__ = ['dijkstra_maximum_flow',
            'dijkstra_maximum_flow_value',
@@ -89,8 +87,13 @@ def dijkstra_minimum_cut_value(G, s, t, capacity='capacity', flow_func=None, **k
 
     return R.graph['flow_value']
 
+print("Output dictionary with maximum flow as values (in this case, 7 = max flow)")
+print(flow_dict,"\n")
 
-print(flow_dict)
+print("Value of the maximum flow")
+print(flow_value,"\n")
+
+print("Max flow between two nodes in the graph:")
 print(flow_dict['1']['2'])
 print(flow_dict['2']['3'])
 print(flow_dict['3']['4'])
