@@ -87,13 +87,12 @@ def dijkstra_minimum_cut_value(G, s, t, capacity='capacity', flow_func=None, **k
 
     return R.graph['flow_value']
 
-print("Output dictionary with maximum flow as values (in this case, 7 = max flow)")
+print("\nOutput dictionary with maximum flow as values (in this case, 7 = max flow)")
 print(flow_dict,"\n")
 
-print("Value of the maximum flow")
-print(flow_value,"\n")
+print("Value of the maximum flow :", flow_value,"\n")
 
 print("Max flow between two nodes in the graph:")
-print(flow_dict['1']['2'])
-print(flow_dict['2']['3'])
-print(flow_dict['3']['4'])
+print(" - between nodes 1 and 2 :",flow_dict['1']['2'])
+print(" - between nodes 2 and 3 :",flow_dict['2']['3'])
+print(" - between nodes 3 and 4 :",flow_dict['3']['4'])
