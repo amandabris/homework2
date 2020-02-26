@@ -40,7 +40,7 @@ def dijkstra_maximum_flow_value(G, s, t, capacity='capacity', flow_func=None, **
     if not callable(flow_func):
         raise nx.NetworkXError("flow_func has to be callable.")
 
-    R = flow_func(G, s, t, capacity=capacity, value_only=True, **kwargs)
+    R = flow_func(G, s, t, capacity='capacity', value_only=True, **kwargs)
 
     return R.graph['flow_value']
 
@@ -88,3 +88,9 @@ def dijkstra_minimum_cut_value(G, s, t, capacity='capacity', flow_func=None, **k
     R = flow_func(G, s, t, capacity=capacity, value_only=True, **kwargs)
 
     return R.graph['flow_value']
+
+
+print(flow_dict)
+print(flow_dict['1']['2'])
+print(flow_dict['2']['3'])
+print(flow_dict['3']['4'])
